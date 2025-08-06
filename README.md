@@ -1,9 +1,8 @@
 # My i3-WM config
 Hello folks, this is my amazing config file for the i3-WM, I took inspiration from many sources, like omarchy, typercraft config files, christitus tech dotfiles and I've used what I loved from the different sources, I've a very minimal design, I have some personalised keybinding that you may like.
 
-<img width="3523" height="2295" alt="screen_2025-08-06 16:39:44 612762" src="https://github.com/user-attachments/assets/435cda94-c317-4a60-8775-11f62ce22ec2" />
-
 ## Screenshots
+<img width="3523" height="2295" alt="screen_2025-08-06 16-39-44 612762" src="https://github.com/user-attachments/assets/a26dc7c6-04f4-432f-8764-3cbc1e141129" />
 
 ## Features
 - Minimal setup
