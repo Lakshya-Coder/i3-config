@@ -2,7 +2,7 @@
 
 <img width="2177" height="1455" alt="main" src="https://github.com/user-attachments/assets/8e20faa8-9a77-4d2d-840d-4ce793218433" />
 
-Hello folks, this is my amazing config file for the i3-WM, I took inspiration from many sources, like omarchy, typercraft config files, christitus tech dotfiles and I've used what I loved from the different sources, I've a very minimal design, I have some personalised keybinding that you may like.
+Hello folks, this is my amazing setup for the i3-WM, I took inspiration from many sources, like omarchy, typercraft config files, christitus tech dotfiles and I've used what I loved from the different sources. I've a very minimal design, I have some personalised keybinding that you may like.
 
 ## Features
 - Minimal setup
