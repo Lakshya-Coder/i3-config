@@ -1,6 +1,6 @@
 # How it looks
 
-<img width="3523" height="2238" alt="12312312" src="https://github.com/user-attachments/assets/39175f31-b3a4-4643-bc6e-d7e48e52aff3" />
+<img width="2177" height="1455" alt="main" src="https://github.com/user-attachments/assets/8e20faa8-9a77-4d2d-840d-4ce793218433" />
 
 Hello folks, this is my amazing config file for the i3-WM, I took inspiration from many sources, like omarchy, typercraft config files, christitus tech dotfiles and I've used what I loved from the different sources, I've a very minimal design, I have some personalised keybinding that you may like.
 
