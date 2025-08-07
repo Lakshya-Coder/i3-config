@@ -1,4 +1,4 @@
-# How it looks
+# How it looks 👀‼️
 
 <img width="2177" height="1455" alt="main" src="https://github.com/user-attachments/assets/8e20faa8-9a77-4d2d-840d-4ce793218433" />
 
