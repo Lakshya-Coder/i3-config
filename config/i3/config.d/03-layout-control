@@ -1,0 +1,17 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                           Layout Control                                   │
+# │                 ~/.config/i3/config.d/03-layout-control                    │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Container splitting
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Layout modes
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Container navigation
+bindsym $mod+Shift+a focus parent
+bindsym $mod+Shift+d focus child

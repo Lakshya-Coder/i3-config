@@ -1,0 +1,31 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                        Application Shortcuts                               │
+# │                  ~/.config/i3/config.d/06-applications                     │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Core applications
+bindsym $mod+Return exec $terminal
+bindsym $mod+space exec --no-startup-id $launcher
+bindsym $mod+b exec $browser
+
+# File management
+bindsym $mod+Shift+Return exec $file_manager
+
+# Development
+bindsym $mod+c exec $editor
+
+# Custom applications
+bindsym $mod+Shift+Ctrl+n exec flatpak run md.obsidian.Obsidian
+bindsym $mod+Shift+Ctrl+q exec $home/.config/rofi/powermenu.sh
+
+# Quick launch menu (alternative launcher)
+bindsym $mod+d exec --no-startup-id dmenu_run
+
+# System applications
+bindsym $mod+Shift+s exec --no-startup-id pavucontrol
+bindsym $mod+Shift+n exec --no-startup-id nm-connection-editor
+
+# Additional shortcuts (uncomment as needed)
+# bindsym $mod+Shift+b exec --no-startup-id blueman-manager
+# bindsym $mod+Shift+a exec --no-startup-id arandr
+# bindsym $mod+p exec --no-startup-id flameshot gui

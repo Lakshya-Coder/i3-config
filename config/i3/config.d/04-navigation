@@ -1,0 +1,36 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                        Movement and Navigation                             │
+# │                  ~/.config/i3/config.d/04-navigation                       │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Focus movement (Vim-style)
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# Focus movement (Arrow keys)
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Window movement (Vim-style)
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# Window movement (Arrow keys)
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Workspace navigation
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# Move container to next/prev workspace
+bindsym $mod+Ctrl+Left move container to workspace prev
+bindsym $mod+Ctrl+Right move container to workspace next

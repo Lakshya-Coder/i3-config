@@ -1,0 +1,26 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                           Screenshot Tools                                 │
+# │                  ~/.config/i3/config.d/08-screenshots                      │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Ensure screenshot directory exists
+exec --no-startup-id mkdir -p $screenshot_dir
+
+# Full screen screenshots (save to file)
+bindsym $mod+Shift+3 exec --no-startup-id maim "$screenshot_dir/screenshot-$(date '+%Y-%m-%d_%H-%M-%S').jpg" && notify-send "Screenshot saved" "Full screen captured"
+
+# Selection screenshots (save to file)
+bindsym $mod+Shift+4 exec --no-startup-id maim --select "$screenshot_dir/screenshot-$(date '+%Y-%m-%d_%H-%M-%S').jpg" && notify-send "Screenshot saved" "Selection captured"
+
+# Full screen screenshots (copy to clipboard)
+bindsym $mod+Ctrl+Shift+3 exec --no-startup-id maim | xclip -selection clipboard -t image/png && notify-send "Screenshot copied" "Full screen copied to clipboard"
+
+# Selection screenshots (copy to clipboard)
+bindsym $mod+Ctrl+Shift+4 exec --no-startup-id maim --select | xclip -selection clipboard -t image/png && notify-send "Screenshot copied" "Selection copied to clipboard"
+
+# Window screenshot
+bindsym $mod+Ctrl+Shift+w exec --no-startup-id maim -i $(xdotool getactivewindow) "$screenshot_dir/window-$(date '+%Y-%m-%d_%H-%M-%S').jpg" && notify-send "Screenshot saved" "Active window captured"
+
+# Alternative: Use flameshot (uncomment if you prefer)
+# bindsym $mod+Shift+3 exec --no-startup-id flameshot full -p $screenshot_dir
+# bindsym $mod+Shift+4 exec --no-startup-id flameshot gui

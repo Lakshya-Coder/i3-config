@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# make sure that you changed this wallpaper directory location
+wallpaper_dir="/home/lsk/wallpapers"
+
+wallpaper=$(ls "$wallpaper_dir" | rofi -dmenu -i -l 50 -p "Choose your wallpaper")
+
+if [ -n "$wallpaper" ]; then
+    feh --bg-fill "$wallpaper_dir/$wallpaper"
+fi

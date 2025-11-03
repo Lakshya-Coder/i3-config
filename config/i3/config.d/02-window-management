@@ -1,0 +1,26 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                         Window Management                                  │
+# │                ~/.config/i3/config.d/02-window-management                  │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Drag floating windows
+floating_modifier $mod
+tiling_drag modifier titlebar
+
+# Window control
+bindsym $mod+q kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f focus mode_toggle
+
+# Focus management
+bindsym $mod+a focus parent
+
+# Window rules
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Arandr"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="Nitrogen"] floating enable
+
+# Sticky windows (remain on all workspaces)
+# for_window [class="Stickynotes"] sticky enable

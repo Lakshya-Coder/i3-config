@@ -1,0 +1,39 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                            Core Variables                                  │
+# │                   ~/.config/i3/config.d/00-variables                       │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Modifier keys
+set $mod Mod4
+set $alt Mod1
+
+# User directories
+set $home /home/lsk
+set $config_dir ~/.config
+set $screenshot_dir /home/$USER/Pictures/Screenshots
+
+# Applications
+set $terminal alacritty
+set $browser google-chrome
+set $launcher rofi -show drun
+set $file_manager thunar
+set $editor code
+
+# Colors (you can customize these)
+set $bg_color #2f343f
+set $inactive_bg_color #2f343f
+set $text_color #f3f4f5
+set $inactive_text_color #676e7d
+set $urgent_bg_color #e53935
+
+# Workspace names (can be customized with icons)
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"

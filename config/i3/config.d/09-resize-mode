@@ -1,0 +1,38 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                              Resize Mode                                   │
+# │                  ~/.config/i3/config.d/09-resize-mode                      │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+mode "resize" {
+    # Vim-style resize
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
+
+    # Arrow key resize
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    # Fine-grained resize (hold Shift)
+    bindsym Shift+Left resize shrink width 1 px or 1 ppt
+    bindsym Shift+Down resize grow height 1 px or 1 ppt
+    bindsym Shift+Up resize shrink height 1 px or 1 ppt
+    bindsym Shift+Right resize grow width 1 px or 1 ppt
+
+    # Coarse resize (hold Ctrl)
+    bindsym Ctrl+Left resize shrink width 50 px or 50 ppt
+    bindsym Ctrl+Down resize grow height 50 px or 50 ppt
+    bindsym Ctrl+Up resize shrink height 50 px or 50 ppt
+    bindsym Ctrl+Right resize grow width 50 px or 50 ppt
+
+    # Exit resize mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+# Enter resize mode
+bindsym $mod+r mode "resize"

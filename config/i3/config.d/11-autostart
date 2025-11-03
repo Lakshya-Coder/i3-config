@@ -1,0 +1,47 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                          Autostart Applications                            │
+# │                   ~/.config/i3/config.d/11-autostart                       │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Desktop entry autostart
+exec --no-startup-id dex --autostart --environment i3
+
+# System services
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --nofork
+exec --no-startup-id nm-applet
+
+# Background and theme
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id nitrogen --restore
+
+# Status bar (Polybar)
+exec_always --no-startup-id killall polybar
+exec_always --no-startup-id $home/.config/polybar/launch_polybar.sh
+
+# Compositor (for transparency/effects)
+# exec --no-startup-id picom -b
+
+# Notification daemon
+exec --no-startup-id dunst
+
+# Audio system
+exec --no-startup-id pipewire
+exec --no-startup-id pipewire-pulse
+
+# Clipboard manager
+# exec --no-startup-id clipit
+
+# Blue light filter
+# exec --no-startup-id redshift -l 40.1:-74.2
+
+# File manager daemon
+# exec --no-startup-id thunar --daemon
+
+# Custom startup applications
+# exec --no-startup-id discord --start-minimized
+# exec --no-startup-id spotify
+# exec --no-startup-id keepassxc
+
+# Workspace-specific autostart
+# exec --no-startup-id i3-msg 'workspace 1; exec alacritty'
+# exec --no-startup-id i3-msg 'workspace 2; exec firefox'

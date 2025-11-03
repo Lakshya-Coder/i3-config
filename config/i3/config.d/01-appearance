@@ -1,0 +1,24 @@
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                          Appearance Settings                               │
+# │                   ~/.config/i3/config.d/01-appearance                      │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Font configuration
+font pango:Cascadia Code NF 12
+
+# Window borders
+for_window [class="^.*"] border pixel 1
+
+# Window colors
+# class                 border             background         text                 indicator
+client.focused          $bg_color          $bg_color          $text_color          #00ff00
+client.unfocused        $inactive_bg_color $inactive_bg_color $inactive_text_color #00ff00
+client.focused_inactive $inactive_bg_color $inactive_bg_color $inactive_text_color #00ff00
+client.urgent           $urgent_bg_color   $urgent_bg_color   $text_color          #00ff00
+
+# Gaps (uncomment if you want gaps)
+# gaps inner 10
+# gaps outer 5
+
+# Hide borders when only one window
+# hide_edge_borders smart

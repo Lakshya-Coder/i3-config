@@ -1,0 +1,211 @@
+# ┌─────────────────────────────────────────────────────────────────────────────┐
+# │  _     ____  _  __                                                          │
+# │ | |   / ___|| |/ /    ⬤ Lakshya Seth                                        │
+# │ | |   \___ \| ' /       ↳ https://www.youtube.com/@lakshyagupta7089         │
+# │ | |___ ___) | . \       ↳ https://github.com/Lakshya-Coder                  │
+# │ |_____|____/|_|\_\      ↳ https://bento.me/lakshyagupta                     │
+# └─────────────────────────────────────────────────────────────────────────────┘
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                              Core Settings                                  │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Modifier keys
+set $mod Mod4
+set $alt Mod1
+
+# Font configuration
+font pango:Cascadia Code NF 12
+
+# Window appearance
+for_window [class="^.*"] border pixel 1
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                          Autostart Applications                             │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Desktop entry autostart
+exec --no-startup-id dex --autostart --environment i3
+
+# System services
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+
+# Custom applications
+exec --no-startup-id ~/.fehbg
+
+# Status bar
+exec_always killall polybar
+exec_always --no-startup-id /home/lsk/.config/polybar/launch_polybar.sh
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                          Window Management                                  │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Drag floating windows
+floating_modifier $mod
+tiling_drag modifier titlebar
+
+# Window control
+bindsym $mod+q kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f focus mode_toggle
+
+# Focus management
+bindsym $mod+a focus parent
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                        Application Shortcuts                                │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Terminal and launcher
+bindsym $mod+Return exec alacritty 
+bindsym $mod+space exec --no-startup-id rofi -show drun 
+
+# Browser
+bindsym $mod+b exec google-chrome
+
+# Custom applications
+bindsym $mod+Shift+Ctrl+n exec flatpak run md.obsidian.Obsidian
+bindsym $mod+Shift+Ctrl+q exec /home/lsk/.config/rofi/powermenu.sh
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                        Movement and Navigation                              │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Focus movement (Vim-style)
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# Focus movement (Arrow keys)
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Window movement (Vim-style)
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# Window movement (Arrow keys)
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                            Layout Control                                   │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Splitting
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Layout modes
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                           Workspace Setup                                   │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Workspace definitions
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Workspace switching
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+bindsym $mod+Escape workspace number $ws10
+
+# Move containers to workspace
+bindsym $mod+$alt+1 move container to workspace number $ws1
+bindsym $mod+$alt+2 move container to workspace number $ws2
+bindsym $mod+$alt+3 move container to workspace number $ws3
+bindsym $mod+$alt+4 move container to workspace number $ws4
+bindsym $mod+$alt+5 move container to workspace number $ws5
+bindsym $mod+$alt+6 move container to workspace number $ws6
+bindsym $mod+$alt+7 move container to workspace number $ws7
+bindsym $mod+$alt+8 move container to workspace number $ws8
+bindsym $mod+$alt+9 move container to workspace number $ws9
+bindsym $mod+$alt+0 move container to workspace number $ws10
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                              Resize Mode                                    │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+mode "resize" {
+    # Vim-style resize
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
+
+    # Arrow key resize
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    # Exit resize mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                          System Configuration                               │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# i3 control
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                            Media Controls                                   │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Audio controls
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# ╭─────────────────────────────────────────────────────────────────────────────╮
+# │                           Screenshot Tools                                  │
+# ╰─────────────────────────────────────────────────────────────────────────────╯
+
+# Screenshot directory
+set $screenshot_dir "/home/$USER/Pictures/Screenshots"
+
+# File screenshots
+bindsym $mod+Shift+3 exec maim "$screenshot_dir/$(date).jpg"
+bindsym $mod+Shift+4 exec maim --select "$screenshot_dir/$(date).jpg"
+
+# Clipboard screenshots
+bindsym $mod+Ctrl+Shift+3 exec maim | xclip -selection clipboard -t image/png
+bindsym $mod+Ctrl+Shift+4 exec maim --select | xclip -selection clipboard -t image/png
